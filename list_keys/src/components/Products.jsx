@@ -2,7 +2,6 @@ import { Product } from './Product.model';
 import { Sidebar } from './Sidebar'
 
 export const Products = () => {
-    
     const products = [
         {
         id: 1,
@@ -68,7 +67,6 @@ export const Products = () => {
         image: "http://intocode.ru/d/react-project-1/images/9.jpg",
         },
     ];
-
         return (
             <div className="container my-3">
                 <div className="row">
@@ -76,15 +74,15 @@ export const Products = () => {
                         <Sidebar />
                     </div>
 
-                        <div className="col">
-                            <div className="row">
-                                {products.map((item) => {
-                                    return <div className="col-md-6 col-lg-4" key={item.id}>
-                                    <Product name = {item.name} price = {item.price} left = {item.left} image = {item.image}/>
-                                        </div>
-                                })}
-                            </div>
+                    <div className="col">
+                        <div className="row">
+                            {products.map((item) => {
+                                return <div className="col-md-6 col-lg-4" key={item.id}>
+                                <Product name = {item.name} price = {item.price} left = {item.left} image = {item.image}/>
+                                    </div>
+                            })}
                         </div>
+                    </div>
                 </div>
             </div>
         )
